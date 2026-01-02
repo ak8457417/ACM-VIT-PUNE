@@ -9,7 +9,7 @@ export default function HeroSection() {
             <div className="flex items-center flex-row ">
                 <Spline
                     className="z-10 pb-10"
-                    scene="https://prod.spline.design/5bx7runDgMCS437l/scene.splinecode"
+                    scene="https://prod.spline.design/fKajMoRUxoWtjwVo/scene.splinecode" 
                 />
             </div>
             <BlurText
