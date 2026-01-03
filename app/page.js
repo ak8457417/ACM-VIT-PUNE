@@ -1,5 +1,11 @@
+"use client"
+import HeroSection from "@/components/HeroSection";
 import TeamPage from "@/pages/TeamPage";
 
 export default function Home() {
-    return <TeamPage />;
+    return (
+        <div>
+            <HeroSection/>
+        </div>
+    );
 }
