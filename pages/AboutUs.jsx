@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import acm from '../public/assets/acm.jpeg'
 
 const floatingAnimation = {
   animate: {
@@ -21,14 +22,17 @@ const AboutUs = () => {
   const forums = ["ML Forum", "IOT Forum", "Coding Club", "Cyber Cell"];
 
   return (
-    <section className="relative w-full py-32 overflow-hidden bg-gradient-to-br from-black via-slate-900 to-black">
+    <section className="relative w-full py-32 overflow-hidden ">
+      {/* Background Glow */}
       <div 
         className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-green-500/5 rounded-full blur-[120px] pointer-events-none" 
         aria-hidden="true"
       />
+     
 
       <div className="relative max-w-7xl mx-auto px-6">
-
+        
+        {/* HEADING */}
         <div className="flex flex-col items-center mb-15">
           <motion.div
             initial={{ width: 0 }}
@@ -47,9 +51,10 @@ const AboutUs = () => {
           </motion.h2>
         </div>
 
+        {/* CONTENT ROW */}
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-24">
           
-  
+          {/* IMAGE SIDE */}
           <motion.div
             {...floatingAnimation}
             className="relative w-full lg:w-1/2 flex justify-center"
@@ -63,7 +68,7 @@ const AboutUs = () => {
             >
               <div className="relative w-full max-w-md min-h-[450px] lg:min-h-full overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:shadow-green-500/20 border border-white/5">
                 <Image
-                  src="/img_acm.JPG" 
+                  src={acm}
                   alt="ACM Society"
                   fill
                   priority
@@ -75,7 +80,7 @@ const AboutUs = () => {
             </motion.div>
           </motion.div>
 
-      
+          {/* TEXT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
