@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import acm from '../public/assets/acm.jpeg'
 
 const floatingAnimation = {
   animate: {
@@ -22,18 +21,15 @@ const AboutUs = () => {
   const forums = ["ML Forum", "IOT Forum", "Coding Club", "Cyber Cell"];
 
   return (
-    <section className="relative w-full py-32 overflow-hidden ">
-      {/* Background Glow */}
+    <section className="relative w-full py-32 overflow-hidden bg-gradient-to-br from-black via-slate-900 to-black">
       <div 
         className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-green-500/5 rounded-full blur-[120px] pointer-events-none" 
         aria-hidden="true"
       />
-      <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:60px_60px]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
-        
-        {/* HEADING */}
-        <div className="flex flex-col items-center mb-24">
+
+        <div className="flex flex-col items-center mb-15">
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "80px" }}
@@ -45,16 +41,15 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black text-white tracking-tight"
+            className="text-[38px] font-bold mb-4 text-balance text-white"
           >
-            About <span className="text-green-500">Us</span>
+            About Us
           </motion.h2>
         </div>
 
-        {/* CONTENT ROW */}
         <div className="flex flex-col lg:flex-row items-stretch gap-12 lg:gap-24">
           
-          {/* IMAGE SIDE */}
+  
           <motion.div
             {...floatingAnimation}
             className="relative w-full lg:w-1/2 flex justify-center"
@@ -68,7 +63,7 @@ const AboutUs = () => {
             >
               <div className="relative w-full max-w-md min-h-[450px] lg:min-h-full overflow-hidden rounded-2xl shadow-2xl transition-all duration-500 group-hover:shadow-green-500/20 border border-white/5">
                 <Image
-                  src={acm}
+                  src="/img_acm.JPG" 
                   alt="ACM Society"
                   fill
                   priority
@@ -80,7 +75,7 @@ const AboutUs = () => {
             </motion.div>
           </motion.div>
 
-          {/* TEXT SIDE */}
+      
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
