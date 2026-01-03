@@ -28,12 +28,12 @@ const AboutUs = () => {
         className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-green-500/5 rounded-full blur-[120px] pointer-events-none" 
         aria-hidden="true"
       />
-      <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] [background-size:60px_60px]" />
+     
 
       <div className="relative max-w-7xl mx-auto px-6">
         
         {/* HEADING */}
-        <div className="flex flex-col items-center mb-24">
+        <div className="flex flex-col items-center mb-15">
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "80px" }}
@@ -45,9 +45,9 @@ const AboutUs = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-black text-white tracking-tight"
+            className="text-[38px] font-bold mb-4 text-balance text-white"
           >
-            About <span className="text-green-500">Us</span>
+            About Us
           </motion.h2>
         </div>
 
